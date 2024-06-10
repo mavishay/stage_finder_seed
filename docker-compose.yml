@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  db:
+    image: postgres:14-alpine
+    ports:
+      - 5433:5432
+    environment:
+      - POSTGRES_PASSWORD=S3cret
+      - POSTGRES_USER=tikal_user
+      - POSTGRES_DB=stage_finder
+  be:
+    build: .
+    volumes:
+      - ./stage_finder:/app/stage_finder
+    restart: on-failure
+    ports:
+      - "9090:9090"

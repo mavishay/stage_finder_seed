@@ -7,6 +7,16 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
+fastapi = "^0.111.0"
+fastapi-sqlalchemy = "^0.2.1"
+pydantic = "^2.7.3"
+alembic = "^1.13.1"
+psycopg2-binary = "^2.9.9"
+uvicorn = "^0.30.1"
+langchain-openai = "^0.1.8"
+langchain = "^0.2.3"
+llama-index-llms-openai = "^0.1.22"
+llama-index = "^0.10.43"
 
 
 [build-system]
